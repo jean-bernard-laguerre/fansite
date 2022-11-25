@@ -1,0 +1,321 @@
+/* Polices */
+
+@font-face {
+    font-family: "PTSerif";
+    src: url("/fansite/style/fonts/PT_Serif/PTSerif-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cagliostro";
+    src: url("/fansite/style/fonts/Cagliostro/Cagliostro-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Classe Generique */
+
+.flex {display: flex;}
+.wrap {flex-wrap: wrap;}
+.col {flex-direction: column;}
+.space {justify-content: space-between;}
+.centre {margin: auto; align-items: center;}
+.white {color: whitesmoke;}
+.cagliostro {font-family: "Cagliostro", serif;}
+.ptserif {font-family: "PTSerif", serif;}
+.pad1 {padding: 1%;}
+
+/**/
+
+body {margin: 0; min-height: 100vh; overflow: scroll;}
+main, menu {flex: 1;}
+a {text-decoration: none; color:  inherit;}
+
+main {
+    background-image: url(https://images7.alphacoders.com/443/443820.jpg);
+    background-position: 50% 0;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+
+h2 {
+    font-family: "PTSerif", serif;
+    font-size: 2em;
+}
+main {
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 5%;
+    background-color: rgb(30, 30, 30);
+}
+section {
+    animation: fadein .3s;
+    align-items: center;
+    width: max(12vw, 80%);
+    margin: 1% 0%;
+    border-radius: 5px;
+}
+
+/* Header */
+
+header {
+    box-shadow: 0px 16px 16px 0px rgb(0 0 0 / 50%);
+    justify-content: end;
+    background-image: url(https://d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/2013/07/0b18cbanner.png);
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
+    z-index: 2;
+}
+
+nav{
+    color: rgb(61, 6, 17);
+    text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white;
+    font-family: "PTSerif";
+    font-weight: bold;
+    position: relative;
+    bottom: 0;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5% 3%;
+}
+
+.navlogo img{
+    height: 35px;
+    width: auto;
+    filter: drop-shadow(0px 0px 1px black);
+}
+menu {justify-content: end;}
+
+menu li{
+    list-style: none;
+    padding: 1%;
+    transition: .2s;
+}
+
+menu li:hover {
+    font-size: larger;
+    transition: .4s;
+}
+
+/* Footer */
+
+footer {
+    box-shadow: 0px -16px 16px 0px rgb(0 0 0 / 50%);
+    height: 150px;
+    background-image: url(https://wiki.guildwars2.com/images/9/92/Professions_reveal_12_%28highlighted%29.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer img {
+    width: 30px;
+    height: auto;
+    margin: 0 3px;
+    filter: drop-shadow(0px 0px 16px black);
+}
+
+.footer_nav {
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Actualité */
+
+.article_img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: auto;
+    max-height: 375px;
+    overflow: hidden;
+}
+
+h2 {animation: slideinRight .7s; animation-timing-function: ease-out;}
+.actu article, .histoire article {animation: slideinLeft .7s;  animation-timing-function: ease-out;}
+.actu article {
+    box-shadow: 0px 0px 16px 5px rgb(0 0 0 / 50%);
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10%;
+}
+
+.article-content {
+    justify-content: space-between;
+}
+
+article {font-family: "Cagliostro", serif ;}
+
+.histoire img {
+    height: auto;
+    width: clamp(300px, 30vw, 400px);
+    object-fit: contain;
+}
+
+/* Histoire */
+
+.histoire article {
+    border-width: 1px;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-style: solid;
+    border-image: linear-gradient(to right,rgb(50, 50, 50), rgb(110, 110, 110), rgb(50, 50, 50)) 1;
+    padding: 2% 0;
+}
+
+.histoire article img {
+    flex: 3;
+    width: clamp(200px, 20vw, 350px);
+}
+.histoire article div {
+    flex: 7;
+    margin: auto 2%;
+}
+
+/* Outils */
+
+.outils article img {
+    box-shadow: 0px 0px 16px 5px rgb(0 0 0 / 50%);
+    width: 100%;
+}
+
+.outils article {
+    text-align: center;
+}
+
+/* Guides */
+
+.profession img {
+    max-width: 256px;
+    width: 100%;
+
+}
+
+.profession {
+    animation: fadein .7s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+    font-family: "Cagliostro", serif;
+    width: clamp(128px, 30%, 512px);
+}
+
+.profession img {
+    filter: saturate(.5);
+    transition: .5s;
+}
+
+.profession img:hover {
+    filter: drop-shadow(0px 0px 8px white) saturate(1.5);
+}
+
+/* Contact */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    background-color: inherit;
+    font-family: "Cagliostro";
+    color: inherit;
+    padding: 1%;
+    margin: 1%;
+}
+
+button {
+    border-radius: 0;
+    background: rgb(52,0,0);
+    background: linear-gradient(0deg, rgba(52,0,0,1) 0%, rgba(121,9,19,1) 49%, rgba(149,0,15,1) 100%);
+    border: 1px solid #7d7d7d;
+    font-family: "Cagliostro";
+    width: fit-content;
+    margin: auto;
+}
+
+/* Responsive */
+
+@media  screen  and (min-width: 1201px){
+    .article-content div{
+        width: 45%;
+        padding: 2%;
+    }
+    
+    .article-content iframe{
+        width: 45%;
+        min-height: 40vh;
+    }
+
+    
+}
+@media  screen  and (max-width: 1200px){
+    .article-content {
+        flex-direction: column;
+    }
+    .article-content div{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .article-content iframe{
+        width: 100%;
+        height: 40vh;
+    }
+}
+@media  screen  and (max-width: 600px){
+    main {padding: 0;}
+    .actu {width: 100%;}
+    menu {
+        flex-direction: column;
+        text-align: end;
+        margin: auto;
+    }
+    h2 {padding: 0 2%;}
+    
+    .histoire article {
+        flex-direction: column;
+    }
+
+    .histoire article img {margin: auto;}
+}
+
+/* Animations */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideinRight {
+    from { 
+        margin-left: -100%;
+        width: 100%;
+        height: auto;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+        height: auto;
+    }
+}
+@keyframes slideinLeft {
+    from { 
+        margin-left: 100%;
+        width: 100%;
+        height: auto;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+        height: auto;
+    }
+}
+
