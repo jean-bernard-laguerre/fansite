@@ -149,12 +149,6 @@ h2 {animation: slideinRight .7s; animation-timing-function: ease-out;}
 
 article {font-family: "Cagliostro", serif ;}
 
-.histoire img {
-    height: auto;
-    width: clamp(300px, 30vw, 400px);
-    object-fit: contain;
-}
-
 /* Histoire */
 
 .histoire article {
@@ -168,6 +162,8 @@ article {font-family: "Cagliostro", serif ;}
 }
 
 .histoire article img {
+    height: auto;
+    object-fit: contain;
     flex: 3;
     width: clamp(200px, 20vw, 350px);
 }
